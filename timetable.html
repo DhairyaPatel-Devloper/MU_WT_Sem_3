@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable Replicate</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: #f5f5f5;
+            padding: 20px;
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 11px;
+            color: #000;
+        }
+
+        .timetable-container {
+            width: 100%;
+            max-width: 1100px;
+            margin: 0 auto;
+            background-color: #fff;
+            border: 3px solid #444; 
+            padding: 2px; 
+        }
+
+        .header {
+            position: relative;
+            padding: 15px;
+        }
+
+        .header-logos {
+            position: absolute;
+            left: 15px;
+            top: 10px;
+        }
+
+        .mu-logo {
+            height: 65px;
+        }
+
+        .header-titles {
+            width: 100%;
+            text-align: center;
+        }
+
+        .faculty-title {
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+            letter-spacing: 0.5px;
+        }
+
+        .dept-title {
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .header-info-container {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            font-size: 12px;
+            min-height: 45px;
+        }
+
+        .info-block {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+
+        .info-block-right {
+            position: absolute;
+            right: 50px;
+            top: 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 2px solid #555;
+            empty-cells: show;
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 6px;
+            text-align: center;
+            vertical-align: middle;
+        }
+
+        .table-header, .bg-grey {
+            background-color: #e2e2e2;
+            font-weight: bold;
+        }
+
+        .bg-yellow {
+            background-color: #ffff00;
+        }
+
+        .bg-blue {
+            background-color: #9fbcf4;
+            font-weight: bold;
+        }
+
+        .no-top-border {
+            border-top: none;
+        }
+
+        .table-2-left {
+            text-align: left;
+        }
+
+        .table-subjects {
+            border-bottom: none ;
+        }
+
+        .signature-table {
+            border-top: none ;
+            table-layout: fixed;
+        }
+
+        .signature-table td {
+            height: 80px;
+            vertical-align: bottom;
+            font-weight: bold;
+            padding-bottom: 10px;
+            border-top: none ;
+        }
+
+        .signature-img {
+            height: 40px;
+            margin-bottom: 5px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+  <div class="timetable-container">
+    <div class="header">
+        <div class="header-logos">
+            <img src="https://www.marwadiuniversity.ac.in/wp-content/themes/marwadi-university/assets/img/mu-logo.svg" alt="MU Logo" class="mu-logo">
+        </div>
+        <div class="header-titles">
+            <div class="faculty-title">FACULTY OF ENGINEERING AND TECHNOLOGY</div>
+            <div class="dept-title">Department of Computer Engineering</div>
+            
+            <div class="header-info-container">
+                <div class="info-block">
+                    <div>Class Room:- MA201, MA211,MA507, MB606</div>
+                    <div>Semester:- III</div>
+                    <div>Class Coordinator: Prof. Parita Mer (9664877780) - MA208E</div>
+                </div>
+                <div class="info-block info-block-right">
+                    <div>With Effect From Date:- 10/07/2026</div>
+                    <div>Division:- EC1</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <table>
+        <tr class="table-header">
+            <td width="3%">Sr. No.</td>
+            <td width="15%" colspan="2">TIME</td>
+            <td width="16%" colspan="2">MONDAY</td>
+            <td width="16%" colspan="2">TUESDAY</td>
+            <td width="16%" colspan="2">WEDNESDAY</td>
+            <td width="16%" colspan="2">THURSDAY</td>
+            <td width="18%" colspan="2">FRIDAY</td>
+        </tr>
+        
+        <tr>
+            <td><b>1</b></td>
+            <td><b>07:30 to 08:30</b></td>
+            <td rowspan="2"><b>07:30 to 09:00</b></td>
+            <td colspan="2">QLA - JDM<br>PG3SHA</td>
+            <td rowspan="2">A<br>DS<br>CSB<br>MB303</td>
+            <td rowspan="2">B<br>DS<br>KNM<br>MB303</td>
+            <td rowspan="2">A<br>AJT<br>KUK<br>MB302</td>
+            <td rowspan="2">B<br>AJT<br>SRK<br>MB302</td>
+            <td colspan="2" rowspan="2">PS - PCS<br>MA211</td>
+            <td colspan="2" rowspan="2" class="bg-yellow">WT - CMV<br>MA201</td>
+        </tr>
+
+        <tr>
+            <td><b>2</b></td>
+            <td><b>08:30 to 09:30</b></td>
+            <td colspan="2">LIBRARY</td>
+        </tr>
+
+        <tr>
+            <td><b>3</b></td>
+            <td><b>09:30 to 10:00</b></td>
+            <td><b>09:00 to 10:00</b></td>
+            <td colspan="2">PS - T - PCS<br>MA201</td>
+            <td colspan="2">LIBRARY</td>
+            <td colspan="2">WT - CMV<br>MB202</td>
+            <td colspan="2">LIBRARY</td>
+            <td colspan="2">LIBRARY</td>
+        </tr>
+
+        <tr>
+            <td colspan="3" class="bg-grey">10:00 - 10:30</td>
+            <td colspan="10" class="bg-blue">BREAK</td>
+        </tr>
+
+        <tr>
+            <td><b>4</b></td>
+            <td><b>10:30 to 11:30</b></td>
+            <td rowspan="2"><b>10:30 to 12:00</b></td>
+            <td colspan="2" rowspan="2">AJT - KUK<br>MA507</td>
+            <td colspan="2" rowspan="2">ADBMS - RVA<br>PG3SHA</td>
+            <td colspan="2" rowspan="2">DS - CSB<br>PG3SHA</td>
+            <td colspan="2" rowspan="2" class="bg-yellow">AJT - KUK<br>MA209</td>
+            <td colspan="2" rowspan="2" class="bg-yellow">PS - PCS<br>MB205A</td>
+        </tr>
+
+        <tr>
+            <td><b>5</b></td>
+            <td><b>11:30 to 12:30</b></td>
+        </tr>
+
+        <tr>
+            <td><b>6</b></td>
+            <td><b>12:30 to 1:30</b></td>
+            <td><b>12:00 to 1:30</b></td>
+            <td>A<br>WT<br>CMV<br>MC213</td>
+            <td>B<br>ADBMS<br>PMJ<br>MC222</td>
+            <td colspan="2">DS - CSB<br>PG3SHA</td>
+            <td colspan="2">ADBMS - RVA<br>PG3SHA</td>
+            <td colspan="2">LIBRARY</td>
+            <td>A<br>ADBMS<br>PMJ<br>MB010</td>
+            <td>B<br>WT<br>CMV<br>MA207</td>
+        </tr>
+    </table>
+
+    <table class="no-top-border table-subjects">
+        <tr class="table-header">
+            <td colspan="3">SUBJECT INITIALS, CODES AND NAMES</td>
+            <td colspan="2">LAB PREMISES</td>
+            <td colspan="4">FACULTY INITIALS AND NAMES</td>
+        </tr>
+        <tr>
+            <td width="5%"><b>AJT</b></td>
+            <td width="7%">01CE0308</td>
+            <td width="30%" class="table-2-left">ADVANCE JAVA TECHNOLOGY</td>
+            <td width="5%"><b>AJT</b></td>
+            <td width="15%" class="table-2-left">MB302</td>
+            <td width="5%"><b>KUK</b></td>
+            <td width="17%" class="table-2-left">Prof. Kunal Khimani</td>
+            <td width="5%"><b>JDM</b></td>
+            <td width="11%" class="table-2-left">Prof. Jignesh Merja</td>
+        </tr>
+        <tr>
+            <td><b>ADBMS</b></td>
+            <td>01CE0310</td>
+            <td class="table-2-left">ADVANCE DATABASE MANAGEMENT SYSTEM</td>
+            <td><b>ADBMS</b></td>
+            <td class="table-2-left">MC222, MB010</td>
+            <td><b>SRK</b></td>
+            <td class="table-2-left">Prof. Sweta Khatana</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><b>DS</b></td>
+            <td>01CE1301</td>
+            <td class="table-2-left">DATA STRUCTURE</td>
+            <td><b>DS</b></td>
+            <td class="table-2-left">MB303</td>
+            <td><b>RVA</b></td>
+            <td class="table-2-left">Dr. Rachit Adhvaryu</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><b>WT</b></td>
+            <td>01CE1306</td>
+            <td class="table-2-left">WEB TECHNOLOGY</td>
+            <td><b>WT</b></td>
+            <td class="table-2-left">MA207, MC213</td>
+            <td><b>PMJ</b></td>
+            <td class="table-2-left">Prof. Parita Mer</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><b>PS</b></td>
+            <td>01CE0309</td>
+            <td class="table-2-left">PROBABILITY AND STATISTICS</td>
+            <td></td>
+            <td></td>
+            <td><b>CSB</b></td>
+            <td class="table-2-left">Prof. Chirag Bhalodia</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td><b>QLA</b></td>
+            <td>01CR0303</td>
+            <td class="table-2-left">QUANTITATIVE & LOGICAL ABILITY-1</td>
+            <td></td>
+            <td></td>
+            <td><b>KNM</b></td>
+            <td class="table-2-left">Prof. Kishan Makadiya</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>CMV</b></td>
+            <td class="table-2-left">Prof. Charmy Vora</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td><b>PCS</b></td>
+            <td class="table-2-left">Prof. Paras Shingadiya</td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
+    <table class="signature-table">
+        <tr>
+            <td>TIME-TABLE INCHARGE</td>
+            <td>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR58YgJ4zC6iILN7LTA5kumBPC2ll65w0smf3zNPri-xw&s=10" alt="H.O.D Signature" class="signature-img">
+                H.O.D.
+            </td>
+        </tr>
+    </table>
+  </div>
+</body>
+</html>
