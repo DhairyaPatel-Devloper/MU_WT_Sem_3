@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-indigo-50 text-indigo-950 flex flex-col min-h-screen">
+
+  <header class="bg-indigo-950 text-indigo-50 shadow-md sticky top-0 z-20">
+    <div class="max-w-7xl mx-auto p-4 flex flex-wrap justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <h1 class="text-2xl font-bold tracking-tight">MyStore</h1>
+        <span class="text-xs bg-indigo-800/70 px-2.5 py-1 rounded-full font-medium">Verified Store</span>
+      </div>
+
+      <nav class="flex items-center gap-6 text-sm font-medium">
+        <a href="#" class="text-white hover:text-indigo-200 transition">Home</a>
+        <a href="#" class="text-indigo-200 hover:text-white transition">Products</a>
+        <a href="#" class="text-indigo-200 hover:text-white transition">Categories</a>
+        <a href="#" class="text-indigo-200 hover:text-white transition">About</a>
+        <a href="#" class="text-indigo-200 hover:text-white transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto w-full p-4 sm:p-8 flex-1 flex flex-col md:flex-row gap-6">
+
+    <aside class="w-full md:w-64 bg-white border border-indigo-100 rounded-xl p-5 shadow-sm self-start">
+      <h3 class="text-lg font-bold text-indigo-950 mb-4 pb-2 border-b border-indigo-100">Filters</h3>
+      
+      <div class="mb-6">
+        <h4 class="text-xs font-semibold text-indigo-900 uppercase tracking-wider mb-3">Categories</h4>
+        <ul class="space-y-2 text-sm">
+          <li>
+            <label class="flex items-center gap-2 cursor-pointer text-indigo-900 hover:text-indigo-700">
+              <input type="checkbox" checked class="rounded border-indigo-300 text-indigo-600 focus:ring-indigo-500">
+              All Products
+            </label>
+          </li>
+          <li>
+            <label class="flex items-center gap-2 cursor-pointer text-indigo-900 hover:text-indigo-700">
+              <input type="checkbox" class="rounded border-indigo-300 text-indigo-600 focus:ring-indigo-500">
+              Electronics
+            </label>
+          </li>
+          <li>
+            <label class="flex items-center gap-2 cursor-pointer text-indigo-900 hover:text-indigo-700">
+              <input type="checkbox" class="rounded border-indigo-300 text-indigo-600 focus:ring-indigo-500">
+              Footwear
+            </label>
+          </li>
+          <li>
+            <label class="flex items-center gap-2 cursor-pointer text-indigo-900 hover:text-indigo-700">
+              <input type="checkbox" class="rounded border-indigo-300 text-indigo-600 focus:ring-indigo-500">
+              Accessories
+            </label>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-semibold text-indigo-900 uppercase tracking-wider mb-3">Price Range</h4>
+        <input type="range" min="1000" max="50000" value="50000" class="w-full accent-indigo-700 cursor-pointer">
+        <div class="flex justify-between text-xs text-indigo-700 font-medium mt-1">
+          <span>₹1,000</span>
+          <span>₹50,000</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="flex-1">
+      <h2 class="text-2xl font-bold text-indigo-950 mb-6">Our Products</h2>
+      
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+        <div class="bg-white border border-indigo-100 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+          <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="Laptop" class="w-full h-48 object-cover rounded-lg mb-3">
+          <h3 class="text-lg font-semibold text-indigo-950">Laptop</h3>
+          <p class="text-indigo-700 font-bold text-lg mt-1">₹45,999</p>
+          <button class="bg-indigo-700 hover:bg-indigo-800 text-white font-medium p-2.5 mt-3 w-full rounded-lg transition duration-200">
+            Buy Now
+          </button>
+        </div>
+
+        <div class="bg-white border border-indigo-100 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+          <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="Mobile" class="w-full h-48 object-cover rounded-lg mb-3">
+          <h3 class="text-lg font-semibold text-indigo-950">Mobile</h3>
+          <p class="text-indigo-700 font-bold text-lg mt-1">₹19,999</p>
+          <button class="bg-indigo-700 hover:bg-indigo-800 text-white font-medium p-2.5 mt-3 w-full rounded-lg transition duration-200">
+            Buy Now
+          </button>
+        </div>
+
+        <div class="bg-white border border-indigo-100 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+          <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Shoes" class="w-full h-48 object-cover rounded-lg mb-3">
+          <h3 class="text-lg font-semibold text-indigo-950">Shoes</h3>
+          <p class="text-indigo-700 font-bold text-lg mt-1">₹2,499</p>
+          <button class="bg-indigo-700 hover:bg-indigo-800 text-white font-medium p-2.5 mt-3 w-full rounded-lg transition duration-200">
+            Buy Now
+          </button>
+        </div>
+
+        <div class="bg-white border border-indigo-100 rounded-xl p-4 shadow-sm hover:shadow-md transition">
+          <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Watch" class="w-full h-48 object-cover rounded-lg mb-3">
+          <h3 class="text-lg font-semibold text-indigo-950">Watch</h3>
+          <p class="text-indigo-700 font-bold text-lg mt-1">₹3,499</p>
+          <button class="bg-indigo-700 hover:bg-indigo-800 text-white font-medium p-2.5 mt-3 w-full rounded-lg transition duration-200">
+            Buy Now
+          </button>
+        </div>
+
+      </div>
+    </main>
+
+  </div>
+
+  <footer class="bg-indigo-950 text-indigo-200 text-center p-5 text-sm mt-8">
+    MyStore © 2026. All rights reserved.
+  </footer>
+
+</body>
+</html>
